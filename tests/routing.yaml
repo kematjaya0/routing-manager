@@ -1,0 +1,20 @@
+dasboard_index:
+    name: dashboard
+    childs: []
+    icon: metismenu-icon pe-7s-home
+master:
+    name: master
+    icon: 'metismenu-icon pe-7s-diamond'
+    childs:
+        qualification_index:
+            name: qualification
+            icon: 'metismenu-icon'
+        business_fields_index:
+            name: 'business_fields'
+            icon: 'metismenu-icon'
+        opd_index:
+            name: 'opd'
+            icon: 'metismenu-icon'
+        class_properties_index:
+            name: 'class_properties'
+            icon: 'metismenu-icon'
