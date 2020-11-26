@@ -49,17 +49,23 @@ class YamlReader implements ReaderInterface
         $resultSets = new ArrayCollection();
         foreach($data as $k => $v)
         {
+            $roles = isset($v['roles']) ? $v['roles'] : [];
             $menu = (new Menu())
                     ->setIcon($v['icon'])
                     ->setName($v['name'])
                     ->setRoute($k)
+                    ->setRoles($roles)
                     ;
+            
             foreach(($v['childs']) as $key => $child)
             {
+                $roles = isset($child['roles']) ? $child['roles'] : [];
                 $childMenu = (new Menu())
                         ->setIcon($v['icon'])
                         ->setName($child['name'])
-                        ->setRoute($key);
+                        ->setRoute($key)
+                        ->setRoles($roles);
+                
                 $menu->addChild($childMenu);
             }
             

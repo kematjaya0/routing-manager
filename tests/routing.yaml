@@ -2,9 +2,11 @@ dasboard_index:
     name: dashboard
     childs: []
     icon: metismenu-icon pe-7s-home
+    roles: []
 master:
     name: master
     icon: 'metismenu-icon pe-7s-diamond'
+    roles: ['ROLE_USER']
     childs:
         qualification_index:
             name: qualification

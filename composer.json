@@ -25,6 +25,7 @@
     "require": {
         "doctrine/common": "^3.0|^2.0",
         "symfony/yaml": "^4.0|^5.0|^5.1",
-        "symfony/filesystem": "^4.0|^5.0|^5.1"
+        "symfony/filesystem": "^4.0|^5.0|^5.1",
+        "symfony/security-core": "^5.1"
     }
 }

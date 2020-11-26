@@ -40,6 +40,8 @@ class Menu implements MenuInterface
      */
     private $icon;
     
+    private $roles = [];
+    
     public function __construct() 
     {
         $this->childs = new ArrayCollection();
@@ -60,6 +62,13 @@ class Menu implements MenuInterface
         return $this->childs;
     }
 
+    public function setChilds(Collection $childs): MenuInterface
+    {
+        $this->childs = $childs;
+        
+        return $this;
+    }
+    
     public function getName(): ?string 
     {
         return $this->name;
@@ -104,6 +113,18 @@ class Menu implements MenuInterface
     function setIcon(string $icon): self 
     {
         $this->icon = $icon;
+        
+        return $this;
+    }
+
+    function getRoles() :array
+    {
+        return $this->roles;
+    }
+
+    function setRoles(array $roles): MenuInterface 
+    {
+        $this->roles = $roles;
         
         return $this;
     }

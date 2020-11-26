@@ -23,4 +23,10 @@ interface MenuInterface
     public function getChilds(): Collection;
     
     public function addChild(MenuInterface $menu):self;
+    
+    public function setChilds(Collection $childs): self;
+    
+    function getRoles() :array;
+
+    function setRoles(array $roles): self;
 }
